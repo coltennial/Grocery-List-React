@@ -4,7 +4,7 @@ import GroceryForm from "./GroceryForm";
 import './App.css';
 
 class App extends Component {
-  state = { grocerys:[] };
+  state = { grocerys:[] }
 
   getUniqueId = () => {
     return Math.floor((1 + Math.random()) * 0x10000)
@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   addItem = (name) => {
-    const { grocerys } = this.state;
+    const { grocerys, } = this.state;
     const grocery = { name, id: this.getUniqueId(), complete: false}
     this.setState({ grocerys: [grocery, ...grocerys]});
   }
@@ -35,8 +35,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <groceryForm addItem={this.addItem} />
+      <div>
+        <GroceryForm addItem={this.addItem} />
         <List name= "Grocery List" items={this.state.grocerys} groceryClick={this.handleClick} />
       </div>
     );

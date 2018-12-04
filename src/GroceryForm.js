@@ -9,5 +9,23 @@ class GroceryForm extends React.Component {
     this.setState({ name: ""});
   }
 
-  
-}
+  handleChange = (e) => {
+    this.setState({ name: e.target.value });
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}> 
+        <input 
+          required 
+          placeholder="Add Item To Grocery List"
+          onChange={this.handleChange}
+          name="name"
+        />
+      </form>
+    )
+  }
+
+};
+
+export default GroceryForm;
