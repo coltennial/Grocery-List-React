@@ -15,7 +15,8 @@ class GroceryForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}> 
+      <form onSubmit={this.handleSubmit}>
+        <label> Welcome to Grocery List </label>
         <input 
           required 
           placeholder="Add Item To Grocery List"

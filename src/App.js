@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import List from "./List";
 import GroceryForm from "./GroceryForm";
+import "./index.css"
 import './App.css';
 
 class App extends Component {
@@ -35,9 +36,9 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id="main-container">
         <GroceryForm addItem={this.addItem} />
-        <List name= "Grocery List" items={this.state.grocerys} groceryClick={this.handleClick} />
+        <p> <List name= "Grocery List" items={this.state.grocerys} groceryClick={this.handleClick} /> </p>
       </div>
     );
   }
